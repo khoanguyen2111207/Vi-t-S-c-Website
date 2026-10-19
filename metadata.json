@@ -1,0 +1,8 @@
+{
+  "name": "Việt Sắc - Phòng Thử Đồ Văn Hóa Ảo & Bách Khoa Cổ Phục",
+  "description": "Bách khoa cổ phục 3 miền, phòng thử đồ văn hóa ảo AI 4K, Audio Guide di sản và kết nối thương mại O2O.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

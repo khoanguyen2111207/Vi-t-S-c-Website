@@ -1,0 +1,97 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-primary: #800000;
+    --color-primary-dark: #520000;
+    --color-accent: #DAA520;
+    --color-accent-light: #F3E5AB;
+    --color-bgcream: #FDFBF7;
+  }
+
+  body {
+    font-family: 'Be Vietnam Pro', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: var(--color-bgcream);
+    color: #292524;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Royal & Heritage Display Headings with Full Vietnamese Support */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Be Vietnam Pro', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-feature-settings: "kern" 1, "liga" 1;
+    line-height: 1.25;
+    letter-spacing: -0.015em;
+  }
+
+  .font-serif {
+    font-family: 'Be Vietnam Pro', system-ui, sans-serif;
+  }
+}
+
+/* Bento Card Style */
+.bento-card {
+  background: #FFFFFF;
+  border-radius: 1.25rem;
+  box-shadow: 0 4px 24px rgba(128, 0, 0, 0.04);
+  border: 1px solid rgba(218, 165, 32, 0.28);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.bento-card:hover {
+  box-shadow: 0 10px 32px rgba(128, 0, 0, 0.08);
+  border-color: rgba(218, 165, 32, 0.55);
+}
+
+/* Custom Scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #F5F2EB;
+  border-radius: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #DAA520;
+  border-radius: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #B8860B;
+}
+
+/* Golden Lotus Animations */
+@keyframes lotusRotate {
+  0% { transform: rotate(0deg) scale(0.96); }
+  50% { transform: rotate(180deg) scale(1.05); }
+  100% { transform: rotate(360deg) scale(0.96); }
+}
+@keyframes lotusPulse {
+  0%, 100% { opacity: 0.4; transform: scale(0.92); }
+  50% { opacity: 0.95; transform: scale(1.1); }
+}
+.lotus-spin {
+  animation: lotusRotate 8s linear infinite;
+}
+.lotus-glow {
+  animation: lotusPulse 2.5s ease-in-out infinite;
+}
+
+/* Audio wave animation */
+@keyframes soundWave {
+  0%, 100% { height: 6px; }
+  50% { height: 22px; }
+}
+.wave-bar {
+  animation: soundWave 0.8s ease-in-out infinite;
+}
+
+/* Map hover animation */
+.vietnam-region-path {
+  transition: fill 0.25s ease, filter 0.25s ease, stroke-width 0.25s ease;
+}
+.vietnam-region-path:hover {
+  filter: drop-shadow(0 2px 6px rgba(218, 165, 32, 0.6));
+}
